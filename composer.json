@@ -4,8 +4,8 @@
     "type": "package",
     "require": {
         "monolog/monolog": "^3.3",
-        "swiftmailer/swiftmailer": "^6.3",
-        "symfony/dotenv": "^6.3"
+        "symfony/dotenv": "^6.3",
+        "symfony/mailer": "^6.3"
     },
     "license": "MIT",
     "autoload": {
