@@ -1,0 +1,22 @@
+{
+    "name": "tu4k0/tu4k0-monolog",
+    "description": "tu4k0",
+    "type": "package",
+    "require": {
+        "monolog/monolog": "^3.3",
+        "swiftmailer/swiftmailer": "^6.3",
+        "symfony/dotenv": "^6.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tu4k0\\Tu4k0Monolog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "tu4k0",
+            "email": "kirya.mlievskij.00@gmail.com"
+        }
+    ]
+}
