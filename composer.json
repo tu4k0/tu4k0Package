@@ -4,14 +4,17 @@
     "type": "package",
     "require": {
         "monolog/monolog": "^3.3",
-        "swiftmailer/swiftmailer": "^6.3",
-        "symfony/dotenv": "^6.3"
+        "symfony/dotenv": "^6.3",
+        "symfony/mailer": "^6.3"
     },
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "Tu4k0\\Tu4k0Monolog\\": "src/"
-        }
+        },
+        "files": [
+            "src/MailerLog.php"
+        ]
     },
     "authors": [
         {
