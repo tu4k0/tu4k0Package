@@ -11,7 +11,10 @@
     "autoload": {
         "psr-4": {
             "Tu4k0\\Tu4k0Monolog\\": "src/"
-        }
+        },
+        "files": [
+            "src/MailerLog.php"
+        ]
     },
     "authors": [
         {

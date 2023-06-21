@@ -57,15 +57,7 @@ class MailerLog
         $this->logPath = $filePath . '/log';
         $this->streamHandler = new StreamHandler($this->logPath);
         $this->streamHandler->setFormatter(new LineFormatter(self::LOG_FORMAT));
-        $this->connection = Transport::fromDsn(
-            sprintf(
-                "smtp://%spackage@gmail.com:%s@%s:%s",
-                $_ENV['USERNAME'],
-                $_ENV['PASSWORD'],
-                $_ENV['HOST'],
-                $_ENV['PORT']
-            )
-        );
+        $this->connection = Transport::fromDsn($_ENV['MAILER_DSN']);
         $this->mailer = new Mailer($this->connection);
         $this->email = new Email();
     }
@@ -106,7 +98,6 @@ class MailerLog
         try {
             $this->mailer->send($this->email);
         } catch (\Symfony\Component\Mailer\Exception\TransportExceptionInterface $e) {
-            print_r($e->getMessage());
         }
     }
 }
